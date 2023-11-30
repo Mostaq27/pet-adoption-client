@@ -1,0 +1,74 @@
+[
+    {
+        
+        
+        "maximumAmount": "785",
+        "donatedAmount": "361b",
+        "lastDate": "2023-11-07",
+        "photo": "https://i.ibb.co/tMFTcWg/full-shot-woman-posing-with-cute-dog.jpg",
+        "name": "Roger Rabbit",
+        "short_details": "Energetic, Playful, Cuddly",
+        "long_details": "Meet Roger Rabbit, a bundle of energy and joy. With his playful antics, Roger turns every moment into a delightful adventure. His cuddly nature and soft fur make him the perfect companion for cozy evenings. Roger's inquisitive eyes and twitching nose add charm to your home, creating a bond that goes beyond words. As Roger hops into your heart, you'll discover the magic of bunny companionship – a loyal friend who brings laughter and warmth to your world. Welcome Roger Rabbit, your new source of endless happiness!",
+        "date": "11/29/2023, 4:46:17 AM"
+    },
+    {
+       
+        "category": "Rabbits",
+        "name": "Roger Rabbit",
+        "age": "1",
+        "photo": "https://i.ibb.co/nk7YX75/30945.jpg",
+        "location": "Asambosti, rangamati",
+        "short_details": "Energetic, Playful, Cuddly",
+        "long_details": "Meet Roger Rabbit, a bundle of energy and joy. With his playful antics, Roger turns every moment into a delightful adventure. His cuddly nature and soft fur make him the perfect companion for cozy evenings. Roger's inquisitive eyes and twitching nose add charm to your home, creating a bond that goes beyond words. As Roger hops into your heart, you'll discover the magic of bunny companionship – a loyal friend who brings laughter and warmth to your world. Welcome Roger Rabbit, your new source of endless happiness!",
+        "date": "11/28/2023, 2:41:34 AM",
+        "adopted": false
+    },
+    {
+       
+        "category": "Rabbits",
+        "name": "Romeo",
+        "age": "2",
+        "photo": "https://i.ibb.co/qy9jgcb/66200.jpg",
+        "location": "Bonorupa, rangamati",
+        "short_details": "Gentle, Affectionate, Graceful",
+        "long_details": "Meet Romeo, the epitome of gentleness and affection. With his graceful movements and soft demeanor, Romeo is a charming addition to any home. His furry coat, as tender as his heart, welcomes gentle strokes and cuddles. A truly affectionate companion, Romeo's presence brings a sense of calm and joy. Adopt Romeo today, and experience the warmth of a bunny friend who adds a touch of grace to your life. He's not just a pet; he's a loving partner ready to share in your moments of peace and happiness.",
+        "date": "11/28/2023, 2:41:34 AM",
+        "adopted": false
+    },
+    {
+    
+        "category": "Rabbits",
+        "name": "Thumper",
+        "age": "3",
+        "photo": "https://i.ibb.co/ySKQ6yg/domestic-pet-rabbit-green-grass.jpg",
+        "location": "Tobolsori, Rangamati",
+        "short_details": "Playful, Energetic, Adorable",
+        "long_details": "Meet Thumper, the embodiment of playful energy and adorable charm. With every hop and skip, Thumper brings boundless joy to your home. His fluffy fur and expressive eyes make him irresistibly cute, and his playful antics are sure to brighten your days. Thumper is not just a pet; he's a lively friend ready to share in your laughter and playfulness. Adopt Thumper today and experience the delightful companionship of a rabbit who adds a touch of magic to your daily life. Get ready for endless moments of fun and affection with this adorable bundle of energy.",
+        "date": "11/18/2023, 2:29:20 AM",
+        "adopted": false
+    },
+    {
+  
+        "category": "Rabbits",
+        "name": "Rocky",
+        "age": "2",
+        "photo": "https://i.ibb.co/mhGLMw4/man-feeding-strawberries-rabbits.jpg",
+        "location": "Asambosti, rangamati",
+        "short_details": "Calm, Curious, Majestic",
+        "long_details": "Meet Rocky, the epitome of calm curiosity and majestic charm. With a demeanor as serene as the mountains, Rocky explores the world with gentle curiosity. His fur, resembling the rugged beauty of rocks, adds to his unique and captivating presence. Rocky is a serene companion, bringing a sense of tranquility to your space. Adopt Rocky today and witness the grace and majesty of a rabbit friend who adds a touch of calm to your daily life. He's not just a pet; he's a majestic companion ready to share in moments of quiet beauty and peaceful companionship.",
+        "date": "11/18/2023, 2:41:34 AM",
+        "adopted": false
+    },
+    {
+ 
+        "category": "Rabbits",
+        "name": "Theodore",
+        "age": "1",
+        "photo": "https://i.ibb.co/8mcGfdv/lovely-baby-2-weeks-thai-rabbit.jpg",
+        "location": "Bonorupa, rangamati",
+        "short_details": "Playful, Cuddly, Charming",
+        "long_details": "Meet Theodore, the epitome of playful charm and cuddly joy. With boundless energy, Theodore hops into your heart, ready for playful adventures. His fur, soft as a teddy bear, invites warm cuddles and affection. Theodore is a charming companion, bringing laughter and delight to every moment. Adopt Theodore today and experience the joy of a rabbit friend who adds a touch of playfulness to your daily life. He's not just a pet; he's a cuddly confidant, always ready to share in moments of joy and bring a smile to your face.",
+        "date": "11/20/2023, 2:41:34 AM",
+        "adopted": false
+    }
+]
