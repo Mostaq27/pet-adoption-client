@@ -11,6 +11,7 @@ const AllUsers = () => {
   const [loading, setLoading] = useState(true)
   
   const [users, setUsers] = useState([])
+  console.log(users)
   useEffect(() => {
     fetch('http://localhost:5000/users')
       .then(res => res.json())
@@ -86,7 +87,7 @@ const AllUsers = () => {
             {
               users.map((user, index) => <tr key={user._id}>
                 <th>{index + 1}</th>
-                <td><figure className=" rounded-lg"><img src={user.photo} alt="photo" className="h-20 w-20 rounded-xl" /></figure> </td>
+                <td><figure className=" rounded-lg"><img src={user.photo} alt="photo" className="h-16 w-16 rounded-xl" /></figure> </td>
                 <td className=" font-semibold">{user.name}</td>
                 {/* <td className=" font-bold">{pet.maximumAmount} $</td> */}
                 <td className=" font-semibold">{user.email}</td>

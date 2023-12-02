@@ -79,7 +79,7 @@ const CreateDonation = () => {
             </Helmet>
             <div className="bg-neutral">
                 <div>
-                    <SectionTitle heading="Create A Donation CampaignsS" ></SectionTitle>
+                    <SectionTitle heading="Create A Donation Campaigns" ></SectionTitle>
                     <div>
                         <form onSubmit={formik.handleSubmit}>
                             <div className="md:flex gap-6">

@@ -83,7 +83,7 @@ const {user} = useAuth();
     })
 
     return (
-        <div className="bg-slate-100">
+        <div className="bg-neutral">
             <div>
                 <SectionTitle heading="Add  A Pet" ></SectionTitle>
                 <div>
