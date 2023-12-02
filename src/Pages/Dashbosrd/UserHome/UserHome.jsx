@@ -1,8 +1,11 @@
+
 import useAuth from "../../../Hooks/useAuth";
 
  
 const UserHome = () => {
-    const {user} = useAuth();
+  const { user } = useAuth()
+    // console.log(user)
+
     return (
         <>
         <div className=" text-center">
@@ -23,7 +26,6 @@ const UserHome = () => {
             </div>
             <p className="text-xl font-semibold">Name: {user?.displayName}</p>
             <p className="text-xl font-semibold">Email: {user?.email}</p>
-            <p className="text-xl font-semibold">Status: </p>
             </div>
         </div>
         </>

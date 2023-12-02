@@ -5,47 +5,59 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
+import axios from 'axios';
 
 
 
 
 const SignUp = () => {
     const { register, getValues, handleSubmit, reset, formState: { errors } } = useForm();
-    const {createUser, upodateUserProfole} = useAuth();
+    const { createUser, upodateUserProfole } = useAuth();
     const navigate = useNavigate();
-    
-    
+
+
     const onSubmit = (data) => {
         console.log(data)
         createUser(data.email, data.password)
-        .then(result =>{
-            const loggedUser = result.user;
-            console.log(loggedUser);
-            upodateUserProfole(data.name, data.photoURL)
-            .then(()=> {
-                console.log('user profileinfo updated')
-                reset();
-                Swal.fire({
-                    position: "top",
-                    icon: "success",
-                    title: "Create user Successfully",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                navigate('/');
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                upodateUserProfole(data.name, data.photoURL)
+                    .then(() => {
+                        // console.log('user profileinfo updated')
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email,
+                        }
+                        axios.post('http://localhost:5000/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    console.log('user added to the database')
+
+                                    reset();
+                                    Swal.fire({
+                                        position: "top",
+                                        icon: "success",
+                                        title: "Create user Successfully",
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    })
+                                    navigate('/');
+                                }
+                            });
+                    })
+                    .catch(error => console.log(error))
             })
-            .catch(error => console.log(error))
-        })
     };
 
 
 
 
-    
+
     return (
         <>
-        
-            
+
+
             <div className="hero log-in min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row-reverse shadow-2xl">
                     <div className="text-center md:w-1/2 lg:text-left ">
@@ -58,7 +70,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text text-black">Photo URL</span>
                                 </label>
-                                <input type="text" {...register("photoURL", { required: true })}  placeholder="Photo URL" className="input input-bordered" />
+                                <input type="text" {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered" />
                                 {errors.photoURL && <span className="text-red-600">Photo URL field is required</span>}
                             </div>
                             <div className="form-control">
@@ -85,9 +97,9 @@ const SignUp = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                           
+
                             <div className="form-control mt-6">
-                                <input type="submit"  className="btn btn-primary text-white font-semibold" value="Sign Up" />
+                                <input type="submit" className="btn btn-primary text-white font-semibold" value="Sign Up" />
                             </div>
                             <div className="form-control">
                                 <p className='text-[#e98d4c]'><small>Already registered? <Link to='/login'>  Go to log in</Link></small></p>

@@ -8,7 +8,6 @@ import useAuth from '../../Hooks/useAuth';
 
 
 const Login = () => {
-    const [disabled, setDisabled] = useState(true);
     const { signIn } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
@@ -17,9 +16,7 @@ const Login = () => {
     const from = location.state?.from?.pathname || "/";
     console.log('state in the location :', location.state)
 
-    useEffect(() => {
-        loadCaptchaEnginge(6)
-    }, [])
+   
 
     const handleLogin = e => {
         e.preventDefault();
@@ -43,15 +40,7 @@ const Login = () => {
            
     }
 
-    const handleValidateCaptcha = (e) => {
-        const use_captcha_value = e.target.value;
-        if (validateCaptcha(use_captcha_value)) {
-            setDisabled(false);
-        }
-        else {
-            setDisabled(true)
-        }
-    }
+   
     return (
         <>
            
@@ -76,16 +65,8 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <LoadCanvasTemplate />
-                                </label>
-                                <input type="text" onBlur={handleValidateCaptcha} name="captcha" placeholder="Type the captcha above" className="input input-bordered bg-white" required />
-                                {/* <button onClick={handleValidateCaptcha} className='btn btn-outline btn-xs mt-2'>Validate</button> */}
-                            </div>
                             <div className="form-control mt-6">
-                                {/* TODO: apply disabled for re captcha */}
-                                <input type="submit" disabled={false} className="btn btn-primary text-white font-semibold bg-[#D1A054]" value="Login" />
+                                <input type="submit" className="btn btn-primary text-white font-semibold bg-[#D1A054]" value="Login" />
                             </div>
                             
                             <div className="form-control">

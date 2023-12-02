@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import CategoryPetsCard from "./CategoryPetsCard";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { Zoom } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 const CategoryPets = () => {
     const { category } = useParams()
@@ -30,6 +31,9 @@ const CategoryPets = () => {
 
     return (
         <>
+            <Helmet>
+                <title>CategoryPets | PawsNest</title>
+            </Helmet>
 
             <div className="pt-10">
                 <Zoom>
@@ -53,7 +57,7 @@ const CategoryPets = () => {
                         :
                         <div>
                             {
-                                pets.length == 0 ? <div className="flex justify-center items-center h-[50vh]"> <h1 className="text-3xl font-bold text-center text-red-800">Now there is no prts available this category.</h1></div>
+                                pets.length == 0 ? <div className="flex justify-center items-center h-[50vh]"> <h1 className="text-3xl font-bold text-center text-red-800">Now there is no pets available this category.</h1></div>
                                     :
                                     <div className="grid grid-cols-1 p-12  md:grid-cols-2 lg:grid-cols-3 gap-5 ">
                                         {

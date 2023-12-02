@@ -19,6 +19,8 @@ import UserHome from "../Pages/Dashbosrd/UserHome/UserHome";
 import DonationCampaign from "../Pages/DonationCampaign/DonationCampaign";
 import DonationCampDetails from "../Pages/DonationCampDetails/DonationCampDetails";
 import UpdatePet from "../Pages/Dashbosrd/UpdatePet/UpdatePet";
+import AllUsers from "../Pages/Dashbosrd/AllUsers/AllUsers";
+import UpdateCampaigns from "../Pages/Dashbosrd/UpdateCampaigns/UpdateCampaigns,";
 
 
 
@@ -73,6 +75,14 @@ import UpdatePet from "../Pages/Dashbosrd/UpdatePet/UpdatePet";
             {
                 path: '/dashboard/updatedpet/:id',
                 element: <UpdatePet></UpdatePet>
+            },
+            {
+                path: '/dashboard/updateddonation/:id',
+                element: <UpdateCampaigns></UpdateCampaigns>
+            },
+            {
+                path: '/dashboard/allusers',
+                element: <AllUsers></AllUsers>
             },
             {
                 path: 'userHome',

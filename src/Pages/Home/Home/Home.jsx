@@ -7,11 +7,15 @@ import Contact from '../Contact/Contact';
 import Category from '../Category/Category';
 import Action from '../Action/Action';
 import Testimonial from '../Testimonial/Testimonial';
+import { Helmet } from 'react-helmet';
 
 
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Home | PawsNest</title>
+      </Helmet>
        
         <Banner></Banner>
         <Category></Category>

@@ -26,7 +26,7 @@ const CategoryPetsCard = ({ pet }) => {
                 <div className=" pb-2 text-center">
                     <Link to={`/pet_details/${_id}`}>
                     <button
-                        className="btn btn-outline bg-slate-100 border-0 border-b-4 border-orange-400 mt-4"
+                        className="btn btn-outline btn-sm text-white bg-blue-400 border-0 border-b-4 border-red-400 mt-4"
                     >Details <FaAngleRight /> </button>
                     </Link>
                 </div>

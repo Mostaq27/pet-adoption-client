@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import logoImg from '../../assets/logo.jpg'
 // import avatarImg from '../../assets/placeholder.jpg'
 import useAuth from '../../Hooks/useAuth';
+import useAdmin from '../../Hooks/useAdmin';
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
-
   const handleLogOut = () => {
     logOut()
       .then(() => { })
@@ -17,6 +17,7 @@ const Navbar = () => {
     <li><Link to="/">Home</Link></li>
     <li><Link to="/Pet_Listing">Pet Listing</Link></li>
     <li><Link to="/donation_campaigns">Donation Camp</Link></li>
+   
 
   </>
   return (
