@@ -19,7 +19,7 @@ live site link : https://pet-adoption-76835.web.app/
 
 ## Used technology and packages 
 - React, Tailwind CSS, flobite
-- react-icon, react-hook-form,formik, react-router-dom, swiper, sweetalert2, momentjs, framer-motion,react-helmet,react-awesome-reveal 
+- react-icon, react-hook-form,formik, react-router-dom, swiper, sweetalert2, momentjs, framer-motion,react-helmet,react-awesome-reveal,react-select 
 - axios
 - tanstack query
 - server side: express, mongodb, dotenv, jsonwebtoken
