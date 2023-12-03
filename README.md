@@ -6,6 +6,7 @@ live site link : https://pet-adoption-76835.web.app/
 
 ## Features
 - used private route
+- used admin route
 - implement 2 type of authentication system , like password, google
 -  2 type of user role, like as admin.
 - user can add pet and Update pet.
