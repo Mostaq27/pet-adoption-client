@@ -21,6 +21,9 @@ import DonationCampDetails from "../Pages/DonationCampDetails/DonationCampDetail
 import UpdatePet from "../Pages/Dashbosrd/UpdatePet/UpdatePet";
 import AllUsers from "../Pages/Dashbosrd/AllUsers/AllUsers";
 import UpdateCampaigns from "../Pages/Dashbosrd/UpdateCampaigns/UpdateCampaigns,";
+import AllPets from "../Pages/Dashbosrd/AllPets/AllPets";
+import AdminInfo from "../Pages/Dashbosrd/AdminInfo/AdminInfo";
+import NotFount from "../Shared/NotFount/NotFount";
 
 
 
@@ -85,8 +88,16 @@ import UpdateCampaigns from "../Pages/Dashbosrd/UpdateCampaigns/UpdateCampaigns,
                 element: <AllUsers></AllUsers>
             },
             {
+                path: '/dashboard/allpets',
+                element: <AllPets></AllPets>
+            },
+            {
                 path: 'userHome',
                 element: <UserHome></UserHome>
+            },
+            {
+                path: 'adminHome',
+                element: <AdminInfo></AdminInfo>
             },
             {
                 path: 'myadded_pet',
@@ -109,5 +120,9 @@ import UpdateCampaigns from "../Pages/Dashbosrd/UpdateCampaigns/UpdateCampaigns,
                 element: <MyDonationCampaigns></MyDonationCampaigns>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <NotFount></NotFount>
     }
   ]);

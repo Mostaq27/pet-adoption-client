@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
 import axios from 'axios';
+import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 
 
 
@@ -106,6 +107,7 @@ const SignUp = () => {
                                 <p className='text-[#e98d4c]'><small>Already registered? <Link to='/login'>  Go to log in</Link></small></p>
                             </div>
                         </form>
+                        <SocialLogin></SocialLogin>
                     </div>
 
                 </div>

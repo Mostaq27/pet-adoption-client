@@ -47,12 +47,12 @@ const Dashboard = () => {
                                 All Users</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/dashboard/adminHome">
+                            <NavLink to="/dashboard/allpets">
                                 <SiPetsathome />
                                 All Pets</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/dashboard/adminHome">
+                            <NavLink to="/dashboard/alldonation">
                                 <FaDonate />
                                 All Donations</NavLink>
                         </li>
@@ -146,11 +146,6 @@ const Dashboard = () => {
                             <NavLink to="/">
                                 <FaHome></FaHome>
                                 Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/order/contact">
-                                <FaEnvelope></FaEnvelope>
-                                Contact</NavLink>
                         </li>
                     </ul>
                 </div>

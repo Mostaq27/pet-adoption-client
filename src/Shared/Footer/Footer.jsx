@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpg"
 
 const Footer = () => {
@@ -28,7 +29,7 @@ const Footer = () => {
             </footer>
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
                 <aside className="items-center grid-flow-col">
-                 <img src={logo} className="h-12" alt="" />
+                 <Link to={'/'}><img src={logo} className="h-12" alt="" /></Link>
                     <p>PawsNest Ltd. <br />Providing reliable tech since 1992</p>
                 </aside>
                 <nav className="md:place-self-center md:justify-self-end">

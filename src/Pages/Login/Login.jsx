@@ -5,6 +5,7 @@ import loginImg from "../../assets/login.jpg"
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
+import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 
 
 const Login = () => {
@@ -73,6 +74,7 @@ const Login = () => {
                                 <p className='text-[#e98d4c]'><small>New Here? <Link to={'/signup'}> Create an Acount</Link></small></p>
                             </div>
                         </form>
+                        <SocialLogin></SocialLogin>
                     </div>
                     <div className="text-center md:w-1/2 lg:text-left ">
                         <img src={loginImg} className='h-[500px]' alt="" />
