@@ -6,6 +6,7 @@ import { FiEdit } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { TbProgressCheck } from "react-icons/tb";
 import { FaCirclePause } from 'react-icons/fa6';
+import { GrFormView } from "react-icons/gr";
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet';
 
@@ -30,39 +31,7 @@ const MyDonationCampaigns = () => {
       })
   }, [])
 
-  const handleDelete = id => {
-    // make sure campaigns is confirmed to delete 
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-    })
-      .then((result) => {
-        if (result.isConfirmed) {
-
-          fetch(`http://localhost:5000/createdonation/${id}`, {
-            method: 'DELETE'
-          })
-            .then(res => res.json())
-            .then(data => {
-              if (data.deletedCount > 0) {
-                Swal.fire(
-                  'Deleted!',
-                  'Your Campaigns has been deleted.',
-                  'success'
-                )
-                // remove the campaigns from the ui
-                const remainingPets = pets.filter(pet => pet._id !== id);
-                setPets(remainingPets);
-              }
-            })
-        }
-      })
-  }
+ 
 
   return (
     <>
@@ -82,7 +51,7 @@ const MyDonationCampaigns = () => {
                 <th>Donation Progress Bar</th>
                 <th>Pause</th>
                 <th>Update</th>
-                <th>Delete</th>
+                <th>View</th>
 
               </tr>
             </thead>
@@ -98,7 +67,10 @@ const MyDonationCampaigns = () => {
                   <td className=" font-semibold"><TbProgressCheck className=" text-yellow-700 h-8 w-8" /></td>
                   <td className=" font-semibold"><button><FaCirclePause className=" text-blue-700 h-8 w-8" /></button></td>
                   <td className=" font-semibold"><Link to={`/dashboard/updateddonation/${pet._id}`}><button className="btn btn-ghost"><FiEdit className=" text-green-700 h-8 w-8"></FiEdit></button></Link></td>
-                  <th><button onClick={() => handleDelete(pet._id)} className="btn btn-ghost"><MdDeleteForever className=" text-red-700 h-8 w-8"></MdDeleteForever></button></th>
+                  <td className='font-semibold'><button className="btn btn-ghost">
+                    <GrFormView className=" text-orange-600 h-8 w-8"/>
+                    </button>
+                    </td>
                 </tr>)
               }
 

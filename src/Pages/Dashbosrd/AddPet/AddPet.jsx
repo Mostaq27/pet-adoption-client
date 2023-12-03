@@ -60,8 +60,8 @@ const {user} = useAuth();
                     date: formattedDate,
                     adopted: false,
                     email: user.email
-
                 }
+                console.log(petItem)
                 const petRes = await axios.post('http://localhost:5000/pets', petItem);
                 // console.log(petRes.data)
                 if(petRes.data.insertedId){

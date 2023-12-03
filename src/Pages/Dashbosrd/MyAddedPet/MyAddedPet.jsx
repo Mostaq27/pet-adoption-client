@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../../Hooks/useAuth";
-import { MdDeleteForever, MdPets } from "react-icons/md";
+import { MdDeleteForever } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
+import { GrUploadOption } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
@@ -78,6 +79,7 @@ const MyAddedPet = () => {
                 <th>Pet Name</th>
                 <th>Category</th>
                 <th>Status</th>
+                <th>Adopted</th>
                 <th>Update</th>
                 <th>Delete</th>
 
@@ -93,6 +95,7 @@ const MyAddedPet = () => {
                   <td className=" font-semibold">{pet.name}</td>
                   <td className=" font-bold">{pet.category}</td>
                   <td className=" font-semibold"></td>
+                  <td><button className="btn btn-ghost"><GrUploadOption className=" text-blue-700 h-8 w-8"/></button></td>
                   <td className=" font-semibold"><Link to={`/dashboard/updatedpet/${pet._id}`}><button className="btn btn-ghost"><FiEdit className=" text-green-700 h-8 w-8"></FiEdit></button></Link></td>
                   <th><button onClick={() => handleDelete(pet._id)} className="btn btn-ghost"><MdDeleteForever className=" text-red-700 h-8 w-8"></MdDeleteForever></button></th>
                 </tr>)

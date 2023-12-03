@@ -24,6 +24,7 @@ import UpdateCampaigns from "../Pages/Dashbosrd/UpdateCampaigns/UpdateCampaigns,
 import AllPets from "../Pages/Dashbosrd/AllPets/AllPets";
 import AdminInfo from "../Pages/Dashbosrd/AdminInfo/AdminInfo";
 import NotFount from "../Shared/NotFount/NotFount";
+import AllDonation from "../Pages/Dashbosrd/AllDonation/AllDonation";
 
 
 
@@ -90,6 +91,10 @@ import NotFount from "../Shared/NotFount/NotFount";
             {
                 path: '/dashboard/allpets',
                 element: <AllPets></AllPets>
+            },
+            {
+                path: '/dashboard/alldonation',
+                element: <AllDonation></AllDonation>
             },
             {
                 path: 'userHome',

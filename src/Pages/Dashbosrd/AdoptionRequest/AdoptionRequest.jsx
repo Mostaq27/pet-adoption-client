@@ -64,46 +64,46 @@ const AdoptionRequest = () => {
   }
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>AdoptationRequest | PawsNestt</title>
-    </Helmet>
-    <div className="p-10">
-        <h3 className="text-center text-3xl font-bold">My Added Pets : <span className=" text-orange-500"> {pets.length} Pets</span></h3>
+      </Helmet>
+      <div className="p-10">
+        <h3 className="text-center text-3xl font-bold">My Adoption Request : <span className=" text-orange-500"> {pets.length} Pets</span></h3>
         <div className="overflow-x-auto">
-            <table className="table">
-                {/* head */}
-                <thead>
-                    <tr>
-                        <th>number</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                        <th>Location</th>
-                        <th>Accept</th>
-                        <th>Reject</th>
+          <table className="table">
+            {/* head */}
+            <thead>
+              <tr>
+                <th>number</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Location</th>
+                <th>Accept</th>
+                <th>Reject</th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    {/* row 1 */}
+              </tr>
+            </thead>
+            <tbody>
+              {/* row 1 */}
 
-                    {
-                        pets.map((pet, index) => <tr key={pet._id}>
-                            <th>{index + 1}</th>
-                            <td className="font-semibold">{pet.user} </td>
-                            <td className=" font-semibold">{pet.email}</td>
-                            <td className=" font-bold">{pet.number}</td>
-                            <td className=" font-semibold">{pet.userLocattion}</td>
-                            <td className=" font-semibold"><button className="btn btn-ghost"><FcAcceptDatabase className=" text-green-700 h-8 w-8"/></button></td>
-                            <th><button onClick={() => handleDelete(pet._id)} className="btn btn-ghost"><MdDeleteForever className=" text-red-700 h-8 w-8"></MdDeleteForever></button></th>
-                        </tr>)
-                    }
+              {
+                pets.map((pet, index) => <tr key={pet._id}>
+                  <th>{index + 1}</th>
+                  <td className="font-semibold">{pet.user} </td>
+                  <td className=" font-semibold">{pet.email}</td>
+                  <td className=" font-bold">{pet.number}</td>
+                  <td className=" font-semibold">{pet.userLocattion}</td>
+                  <td className=" font-semibold"><button className="btn btn-ghost"><FcAcceptDatabase className=" text-green-700 h-8 w-8" /></button></td>
+                  <th><button onClick={() => handleDelete(pet._id)} className="btn btn-ghost"><MdDeleteForever className=" text-red-700 h-8 w-8"></MdDeleteForever></button></th>
+                </tr>)
+              }
 
-                </tbody>
-            </table>
+            </tbody>
+          </table>
         </div>
-    </div>
-</>
+      </div>
+    </>
   )
 }
 

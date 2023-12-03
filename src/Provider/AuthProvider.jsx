@@ -20,16 +20,16 @@ const AuthProvider = ({ children }) => {
 
     const signIn = (email, password) => {
         setLoading(true);
-        return signInWithEmailAndPassword(auth,email, password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
-     //google login 
-     const googleSignIn = () => {
+    //google login 
+    const googleSignIn = () => {
         setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
 
-    const logOut = () =>{
+    const logOut = () => {
         setLoading(true);
         return signOut(auth);
     }

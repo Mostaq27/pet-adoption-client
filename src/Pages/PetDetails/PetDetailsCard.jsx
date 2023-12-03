@@ -5,10 +5,12 @@ import { FaLocationDot } from 'react-icons/fa6';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 
 const PetDetailsCard = ({ pet }) => {
     const { user } = useAuth();
-    const { photo, location, age, name, _id, short_details, long_details, date, category } = pet;
+    const navigate = useNavigate();
+    const { photo, location, age, name, _id, short_details, long_details, date, category, adopted } = pet;
 
     const handleModal = async (e) => {
         e.preventDefault()
@@ -17,13 +19,17 @@ const PetDetailsCard = ({ pet }) => {
         const userLocattion = form.location.value
         const user = form.user.value
         const email = form.email.value
-        const adoptedPet = { userLocattion, number, user, email, photo, category, name }
+        const adoptedPet = { userLocattion, number, user, email, photo, category, name, }
         // console.log(adoptedPet)
 
 
         const adoptRes = await axios.post('http://localhost:5000/adoptPets', adoptedPet);
         console.log(adoptRes.data)
         if (adoptRes.data.insertedId) {
+            axios.patch(`http://localhost:5000/pets/${_id}`)
+                .then(res => {
+                    console.log(res.data)
+                })
             // show success popup
             Swal.fire({
                 position: "top-end",
@@ -32,6 +38,7 @@ const PetDetailsCard = ({ pet }) => {
                 showConfirmButton: false,
                 timer: 1500
             });
+            navigate('/dashboard/adoption_request')
         }
     }
     return (
@@ -85,7 +92,7 @@ const PetDetailsCard = ({ pet }) => {
                             </p>
                         </div>
                         <div className='text-center py-3'>
-                            <button onClick={() => document.getElementById('my_modal_5').showModal()} class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <button disabled={adopted} onClick={() => document.getElementById('my_modal_5').showModal()} class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Adopt
                                 <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
