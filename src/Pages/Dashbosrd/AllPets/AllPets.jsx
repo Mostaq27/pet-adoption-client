@@ -65,7 +65,7 @@ const AllPets = () => {
                 <title>AllPet | PawsNestt</title>
             </Helmet>
             <div className="p-10">
-                <h3 className="text-center text-3xl font-bold">My Added Pets : <span className=" text-orange-500"> {pets.length} Pets</span></h3>
+                <h3 className="text-center text-3xl font-bold">All Pets : <span className=" text-orange-500"> {pets.length} Pets</span></h3>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
@@ -90,7 +90,7 @@ const AllPets = () => {
                                     <td><figure className=" rounded-lg"><img src={pet.photo} alt="photo" className="h-16 w-16 rounded-xl" /></figure> </td>
                                     <td className=" font-semibold">{pet.name}</td>
                                     <td className=" font-bold">{pet.category}</td>
-                                    <td className=" font-semibold"></td>
+                                    <td className=" font-semibold">{pet?.adopted ? "Adopted" : "Not Adopted"}</td>
                                     <td className=" font-semibold"><Link to={`/dashboard/updatedpet/${pet._id}`}><button className="btn btn-ghost"><FiEdit className=" text-green-700 h-8 w-8"></FiEdit></button></Link></td>
                                     <th><button onClick={() => handleDelete(pet._id)} className="btn btn-ghost"><MdDeleteForever className=" text-red-700 h-8 w-8"></MdDeleteForever></button></th>
                                 </tr>)

@@ -38,7 +38,7 @@ const AdoptionRequest = () => {
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Yes, reject it!'
     })
       .then((result) => {
         if (result.isConfirmed) {
@@ -51,7 +51,7 @@ const AdoptionRequest = () => {
               if (data.deletedCount > 0) {
                 Swal.fire(
                   'Deleted!',
-                  'Your Pet has been deleted.',
+                  'Your Pet has been reject.',
                   'success'
                 )
                 // remove the pet from the ui

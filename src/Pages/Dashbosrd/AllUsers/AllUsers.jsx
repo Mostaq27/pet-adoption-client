@@ -67,7 +67,7 @@ const AllUsers = () => {
       <title>AllUSers | PawsNest</title>
     </Helmet>
     <div className="p-10">
-      <h3 className="text-center text-3xl font-bold">My Donation Campaigns  : <span className=" text-orange-500"> {users.length} Pets</span></h3>
+      <h3 className="text-center text-3xl font-bold">All Users : <span className=" text-orange-500"> {users.length} Pets</span></h3>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
