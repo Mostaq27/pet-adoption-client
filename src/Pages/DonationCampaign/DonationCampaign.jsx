@@ -14,7 +14,7 @@ const DonationCampaign = () => {
     }, []);
     const [pets, setPets] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/createdonation')
+        fetch('https://pet-adoptation-server.vercel.app/createdonation')
             .then(res => res.json())
             .then(data => {
                 setPets(data)

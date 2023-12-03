@@ -17,7 +17,7 @@ const PetListing = () => {
     }, []);
     const [pets, setPets] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/pets')
+        fetch('https://pet-adoptation-server.vercel.app/pets')
             .then(res => res.json())
             .then(data => {
                 // const filteredData = data.filter(pet => pet.category.toLowerCase() === category.toLowerCase())

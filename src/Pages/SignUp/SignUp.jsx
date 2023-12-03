@@ -31,7 +31,7 @@ const SignUp = () => {
                             email: data.email,
                             photo: data.photoURL
                         }
-                        axios.post('http://localhost:5000/users', userInfo)
+                        axios.post('https://pet-adoptation-server.vercel.app/users', userInfo)
                             .then(res => {
                                 if (res.data.insertedId) {
                                     console.log('user added to the database')

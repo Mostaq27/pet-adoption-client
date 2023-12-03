@@ -6,19 +6,15 @@ import { GrUploadOption } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
+import axios from "axios";
 
 const MyAddedPet = () => {
   const { user } = useAuth();
   const [loading, setLoading] = useState(true)
-  useEffect(() => {
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
+  
   const [pets, setPets] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/pets')
+    fetch('https://pet-adoptation-server.vercel.app/pets')
       .then(res => res.json())
       .then(data => {
         const filteredData = data.filter(pet => pet.email === user.email);
@@ -42,7 +38,7 @@ const MyAddedPet = () => {
       .then((result) => {
         if (result.isConfirmed) {
 
-          fetch(`http://localhost:5000/pets/${id}`, {
+          fetch(`https://pet-adoptation-server.vercel.app/pets/${id}`, {
             method: 'DELETE'
           })
             .then(res => res.json())
@@ -61,6 +57,35 @@ const MyAddedPet = () => {
         }
       })
   }
+  const handleAdopted = id => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, adopted it!'
+    })
+      .then((result) => {
+        if (result.isConfirmed) {
+
+          axios.patch(`https://pet-adoptation-server.vercel.app/pets/${id}`)
+                .then(res => {
+                    console.log(res.data)
+                })
+            // show success popup
+            Swal.fire({
+                position: "top",
+                icon: "success",
+                title: ` adopted to the pet.`,
+                showConfirmButton: false,
+                timer: 1500
+            });
+         
+        }
+      })
+  } 
 
   return (
     <>
@@ -94,8 +119,8 @@ const MyAddedPet = () => {
                   <td><figure className=" rounded-lg"><img src={pet.photo} alt="photo" className="h-16 w-16 rounded-xl" /></figure> </td>
                   <td className=" font-semibold">{pet.name}</td>
                   <td className=" font-bold">{pet.category}</td>
-                  <td className=" font-semibold"></td>
-                  <td><button className="btn btn-ghost"><GrUploadOption className=" text-blue-700 h-8 w-8"/></button></td>
+                  <td className=" font-semibold">{pet?.adopted ? "Adopted" : "Not Adopted"}</td>
+                  <td><button onClick={() => handleAdopted(pet._id)} className="btn btn-ghost"><GrUploadOption className=" text-blue-700 h-8 w-8"/></button></td>
                   <td className=" font-semibold"><Link to={`/dashboard/updatedpet/${pet._id}`}><button className="btn btn-ghost"><FiEdit className=" text-green-700 h-8 w-8"></FiEdit></button></Link></td>
                   <th><button onClick={() => handleDelete(pet._id)} className="btn btn-ghost"><MdDeleteForever className=" text-red-700 h-8 w-8"></MdDeleteForever></button></th>
                 </tr>)

@@ -17,7 +17,7 @@ const AllPets = () => {
     }, []);
     const [pets, setPets] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/pets')
+        fetch('https://pet-adoptation-server.vercel.app/pets')
             .then(res => res.json())
             .then(data => {
                 setPets(data)
@@ -40,7 +40,7 @@ const AllPets = () => {
             .then((result) => {
                 if (result.isConfirmed) {
 
-                    fetch(`http://localhost:5000/pets/${id}`, {
+                    fetch(`https://pet-adoptation-server.vercel.app/pets/${id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())

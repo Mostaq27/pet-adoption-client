@@ -13,7 +13,7 @@ const AllUsers = () => {
   const [users, setUsers] = useState([])
   console.log(users)
   useEffect(() => {
-    fetch('http://localhost:5000/users')
+    fetch('https://pet-adoptation-server.vercel.app/users')
       .then(res => res.json())
       .then(data => {
         setUsers(data)
@@ -34,7 +34,7 @@ const AllUsers = () => {
         confirmButtonText: "Yes, Make it!"
       }).then((result) => {
         if (result.isConfirmed) {
-            axios.patch(`http://localhost:5000/users/admin/${id}`)
+            axios.patch(`https://pet-adoptation-server.vercel.app/users/admin/${id}`)
     .then(res=>{
         if(res.data.modifiedCount > 0) {
 
@@ -44,7 +44,7 @@ const AllUsers = () => {
                 icon: "success"
               });
 
-              fetch('http://localhost:5000/users')
+              fetch('https://pet-adoptation-server.vercel.app/users')
               .then(res => res.json())
               .then(data => {
                 setUsers(data)

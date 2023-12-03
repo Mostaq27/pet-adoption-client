@@ -18,7 +18,7 @@ const UpdatePet = () => {
     // console.log("udpated id:", id)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/pets/${id}`)
+        fetch(`https://pet-adoptation-server.vercel.app/pets/${id}`)
             .then(res => res.json())
             .then(data => {
                 setPet(data)
@@ -58,7 +58,7 @@ const UpdatePet = () => {
 
             }
             console.log(updateItem)
-            const petRes = await axios.patch(`http://localhost:5000/pets/${id}`, updateItem);
+            const petRes = await axios.patch(`https://pet-adoptation-server.vercel.app/pets/${id}`, updateItem);
             console.log(petRes.data)
             if (petRes.data.modifiedCount > 0) {
                 // show success popup

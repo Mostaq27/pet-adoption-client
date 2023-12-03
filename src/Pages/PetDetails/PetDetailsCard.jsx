@@ -23,10 +23,10 @@ const PetDetailsCard = ({ pet }) => {
         // console.log(adoptedPet)
 
 
-        const adoptRes = await axios.post('http://localhost:5000/adoptPets', adoptedPet);
+        const adoptRes = await axios.post('https://pet-adoptation-server.vercel.app/adoptPets', adoptedPet);
         console.log(adoptRes.data)
         if (adoptRes.data.insertedId) {
-            axios.patch(`http://localhost:5000/pets/${_id}`)
+            axios.patch(`https://pet-adoptation-server.vercel.app/pets/${_id}`)
                 .then(res => {
                     console.log(res.data)
                 })

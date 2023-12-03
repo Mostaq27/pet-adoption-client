@@ -25,6 +25,8 @@ import AllPets from "../Pages/Dashbosrd/AllPets/AllPets";
 import AdminInfo from "../Pages/Dashbosrd/AdminInfo/AdminInfo";
 import NotFount from "../Shared/NotFount/NotFount";
 import AllDonation from "../Pages/Dashbosrd/AllDonation/AllDonation";
+import PrivateRoutes from "./PrivateRoutes";
+import AdminRoute from "./AdminRoute";
 
 
 
@@ -52,11 +54,11 @@ import AllDonation from "../Pages/Dashbosrd/AllDonation/AllDonation";
         },
         {
             path: 'donation_camp_details/:id',
-            element: <DonationCampDetails></DonationCampDetails>
+            element: <PrivateRoutes><DonationCampDetails></DonationCampDetails></PrivateRoutes>
         },
         {
             path:'/pet_details/:id',
-            element:<PetDetails></PetDetails>
+            element:<PrivateRoutes><PetDetails></PetDetails></PrivateRoutes>
         },
        {
         path: '/login',
@@ -74,55 +76,55 @@ import AllDonation from "../Pages/Dashbosrd/AllDonation/AllDonation";
         children:[
             {
                 path: "addpet",
-                element: <AddPet></AddPet>
+                element: <PrivateRoutes><AddPet></AddPet></PrivateRoutes>
             },
             {
                 path: '/dashboard/updatedpet/:id',
-                element: <UpdatePet></UpdatePet>
+                element: <PrivateRoutes><UpdatePet></UpdatePet></PrivateRoutes>
             },
             {
                 path: '/dashboard/updateddonation/:id',
-                element: <UpdateCampaigns></UpdateCampaigns>
+                element: <PrivateRoutes><UpdateCampaigns></UpdateCampaigns></PrivateRoutes>
             },
             {
                 path: '/dashboard/allusers',
-                element: <AllUsers></AllUsers>
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
             },
             {
                 path: '/dashboard/allpets',
-                element: <AllPets></AllPets>
+                element: <AdminRoute><AllPets></AllPets></AdminRoute>
             },
             {
                 path: '/dashboard/alldonation',
-                element: <AllDonation></AllDonation>
+                element: <AdminRoute><AllDonation></AllDonation></AdminRoute>
             },
             {
                 path: 'userHome',
-                element: <UserHome></UserHome>
+                element: <PrivateRoutes><UserHome></UserHome></PrivateRoutes>
             },
             {
                 path: 'adminHome',
-                element: <AdminInfo></AdminInfo>
+                element: <AdminRoute><AdminInfo></AdminInfo></AdminRoute>
             },
             {
                 path: 'myadded_pet',
-                element: <MyAddedPet></MyAddedPet>
+                element: <PrivateRoutes><MyAddedPet></MyAddedPet></PrivateRoutes>
             },
             {
                 path: 'adoption_request',
-                element: <AdoptionRequest></AdoptionRequest>
+                element: <PrivateRoutes><AdoptionRequest></AdoptionRequest></PrivateRoutes>
             },
             {
                 path:'create_donation_campaign',
-                element: <CreateDonation></CreateDonation>,
+                element: <PrivateRoutes><CreateDonation></CreateDonation></PrivateRoutes>,
             },
             {
                 path: 'my_donations',
-                element: <MyDonation></MyDonation>
+                element: <PrivateRoutes><MyDonation></MyDonation></PrivateRoutes>
             },
             {
                 path: 'my_donation_campaigns',
-                element: <MyDonationCampaigns></MyDonationCampaigns>
+                element: <PrivateRoutes><MyDonationCampaigns></MyDonationCampaigns></PrivateRoutes>
             }
         ]
     },

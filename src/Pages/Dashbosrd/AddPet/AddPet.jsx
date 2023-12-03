@@ -62,7 +62,7 @@ const {user} = useAuth();
                     email: user.email
                 }
                 console.log(petItem)
-                const petRes = await axios.post('http://localhost:5000/pets', petItem);
+                const petRes = await axios.post('https://pet-adoptation-server.vercel.app/pets', petItem);
                 // console.log(petRes.data)
                 if(petRes.data.insertedId){
                     // show success popup
