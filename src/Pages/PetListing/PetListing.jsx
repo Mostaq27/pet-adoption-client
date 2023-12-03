@@ -2,6 +2,7 @@ import { RingLoader } from "react-spinners";
 import PetListingCard from "./PetListingCard";
 import { useEffect, useState } from "react";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
+import { Helmet } from "react-helmet";
 
 
 const PetListing = () => {
@@ -29,17 +30,19 @@ const PetListing = () => {
 
     return (
         <>
-            
+            <Helmet>
+                <title>PetListing | PawsNest</title>
+            </Helmet>
             <div className="pt-10">
                 <SectionTitle
-                heading={`Meet Our Adorable Pets Looking for Forever Homes `}
-                subHeading={'"Discover love in every pawprint. Adopt a pet, change a life. Your home, their happy place. Embrace the joy of adoption today!"'}
+                    heading={`Meet Our Adorable Pets Looking for Forever Homes `}
+                    subHeading={'"Discover love in every pawprint. Adopt a pet, change a life. Your home, their happy place. Embrace the joy of adoption today!"'}
                 >
                 </SectionTitle>
                 <div className="mt-10">
                     <form >
                         <div className="flex flex-col justify-center items-center md:flex-row gap-10 ">
-                        <select  className="select select-bordered w-32">
+                            <select className="select select-bordered w-32">
                                 <option value="Dogs">Dogs</option>
                                 <option value="Cats">Cats</option>
                                 <option value="Rabbits">Rabbits</option>
@@ -52,7 +55,7 @@ const PetListing = () => {
                         </div>
                     </form>
                 </div>
-               
+
                 {
                     loading ? <div className="  justify-center items-center flex py-20">
                         <RingLoader

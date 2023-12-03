@@ -4,6 +4,7 @@ import PetDetailsCard from './PetDetailsCard';
 import { useParams } from 'react-router-dom';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import { RingLoader } from 'react-spinners';
+import { Helmet } from 'react-helmet';
 
 const PetDetails = () => {
   const {id} = useParams();
@@ -29,7 +30,7 @@ const PetDetails = () => {
 
     return (
         <>
-            
+            <Helmet><title>PetDetails | PawsNest</title></Helmet>
             <div className="pt-10">
                 <SectionTitle
                 heading={`Meet Our Adorable Pets Looking for Forever Homes `}

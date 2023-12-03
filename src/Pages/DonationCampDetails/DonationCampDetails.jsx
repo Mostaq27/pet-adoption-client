@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { RingLoader } from 'react-spinners';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import DonationCampDetailsCart from './DonationCampDetailsCart';
+import { Helmet } from 'react-helmet';
 
 const DonationCampDetails = () => {
 
@@ -29,6 +30,9 @@ const DonationCampDetails = () => {
 
   return (
     <>
+    <Helmet>
+        <title>DonationCampDetails | PawsNest</title>
+    </Helmet>
             
     <div className="pt-10">
         <SectionTitle

@@ -8,7 +8,7 @@ const CategoryPetsCard = ({ pet }) => {
     const { photo, location, age, name, _id } = pet;
     return (
         <div>
-            <div className="min-w-sm  rounded overflow-hidden shadow-lg">
+            <div className="min-w-sm  rounded-2xl overflow-hidden shadow-lg">
                 <Zoom>
                     <img className="w-96 h-72" src={photo} alt="Sunset in the mountains" />
                 </Zoom>
