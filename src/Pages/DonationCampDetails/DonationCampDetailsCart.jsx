@@ -3,9 +3,11 @@ import React from 'react'
 import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const DonationCampDetailsCart = ({pet}) => {
     const {user} = useAuth();
+    const navigate = useNavigate();
     const {photo, short_details, long_details, name, maximumAmount, donatedAmount, _id} = pet;
 
 
@@ -16,6 +18,7 @@ const DonationCampDetailsCart = ({pet}) => {
         const userLocattion = form.location.value
         const user = form.user.value
         const email = form.email.value
+        const donatedAmount= form.donatedAmount.value
         const donationPet = { userLocattion, number, user, email, photo, name, donatedAmount }
         // console.log(adoptedPet)
 
@@ -31,6 +34,7 @@ const DonationCampDetailsCart = ({pet}) => {
                 showConfirmButton: false,
                 timer: 1500
             });
+            navigate('/dashboard/my_donations')
         }
     }
 
@@ -127,11 +131,18 @@ const DonationCampDetailsCart = ({pet}) => {
                                                     <span className="label-text">User Email</span>
                                                 </label>
                                                 <label className="input-group">
-
                                                     <input readOnly type="email" name="email" defaultValue={user?.email} placeholder="User Email" className="input input-bordered w-full" required />
                                                 </label>
                                             </div>
                                         </div>
+                                        <div className="form-control md:w-1/2 ml-4">
+                                                <label className="label">
+                                                    <span className="label-text">Donated Amount</span>
+                                                </label>
+                                                <label className="input-group">
+                                                    <input  type="text"  name="donatedAmount" defaultValue={donatedAmount} placeholder="donated Amount" className="input input-bordered w-full" required />
+                                                </label>
+                                            </div>
 
                                         <div className="modal-action flex">
                                             <form method="dialog">
