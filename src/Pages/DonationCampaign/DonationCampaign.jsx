@@ -3,6 +3,7 @@ import { RingLoader } from "react-spinners";
 import DonationCampaignCart from "./DonationCampaignCart";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { Helmet } from "react-helmet";
+import { Zoom } from "react-awesome-reveal";
 
 const DonationCampaign = () => {
 
@@ -28,13 +29,14 @@ const DonationCampaign = () => {
             <Helmet>
                 <title>DonationCamp | PawsNest</title>
             </Helmet>
-            <div className="pt-10">
-                <SectionTitle
-                    heading={`Make a Difference with Your Donation`}
-                    subHeading={'Explore our Donation Campaigns and be a part of positive change. Your contribution, no matter the size, can impact lives in education, disaster relief, and healthcare. Join us in creating a better future – start giving today.'}
-                >
-                </SectionTitle>
-
+            <div className="p-10">
+                <Zoom>
+                    <SectionTitle
+                        heading={`Make a Difference with Your Donation`}
+                        subHeading={'Explore our Donation Campaigns and be a part of positive change. Your contribution, no matter the size, can impact lives in education, disaster relief, and healthcare. Join us in creating a better future – start giving today.'}
+                    >
+                    </SectionTitle>
+                </Zoom>
 
                 {
                     loading ? <div className="  justify-center items-center flex py-20">

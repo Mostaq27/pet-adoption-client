@@ -1,4 +1,5 @@
 
+import { motion } from 'framer-motion';
 import { Zoom } from 'react-awesome-reveal';
 import { FaAngleRight } from 'react-icons/fa';
 import { FaLocationDot } from "react-icons/fa6";
@@ -7,7 +8,8 @@ import { Link } from 'react-router-dom';
 const CategoryPetsCard = ({ pet }) => {
     const { photo, location, age, name, _id } = pet;
     return (
-        <div>
+        <motion.div whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}>
+
             <div className="min-w-sm  rounded-2xl overflow-hidden shadow-lg">
                 <Zoom>
                     <img className="w-96 h-72" src={photo} alt="Sunset in the mountains" />
@@ -25,13 +27,13 @@ const CategoryPetsCard = ({ pet }) => {
                 </div>
                 <div className=" pb-2 text-center">
                     <Link to={`/pet_details/${_id}`}>
-                    <button
-                        className="btn btn-outline btn-sm text-white bg-blue-400 border-0 border-b-4 border-red-400 mt-4"
-                    >Details <FaAngleRight /> </button>
+                        <button
+                            className="btn btn-outline btn-sm text-white bg-blue-400 border-0 border-b-4 border-red-400 mt-4"
+                        >Details <FaAngleRight /> </button>
                     </Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

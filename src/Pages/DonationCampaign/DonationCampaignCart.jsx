@@ -1,16 +1,18 @@
+import { Zoom } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
 
 const DonationCampaignCart = ({pet}) => {
     const {photo, name, maximumAmount, donatedAmount, _id} = pet;
     return (
-        <div>
-            <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[48rem] flex-row">
-                <div
-                    className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+        <Zoom>
+            <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[350px] flex-row">
+                <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+                   
                     <img
                         src={photo}
-                        alt="card-image" className="object-cover w-full h-full" />
+                        alt="card-image" className="object-cover w-56 h-full" />
+                       
                 </div>
                 <div className="p-6">
                     <h6
@@ -34,7 +36,7 @@ const DonationCampaignCart = ({pet}) => {
                         </Link>
                 </div>
             </div>
-        </div>
+        </Zoom>
     )
 }
 
