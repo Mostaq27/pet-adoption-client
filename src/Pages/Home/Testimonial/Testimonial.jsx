@@ -1,15 +1,18 @@
 
-import React from 'react'
+
+import { Slide, Zoom } from 'react-awesome-reveal';
 
 const Testimonial = () => {
     return (
         <section className="dark:bg-slate-500 dark:text-gray-100">
             <div className="container px-6 py-12 mx-auto">
                 <div className="grid items-center gap-4 xl:grid-cols-5">
+                    <Zoom>
                     <div className="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
                         <h2 className="text-4xl font-bold">From Shelter to Forever Home Our Success Stories</h2>
-                      
                     </div>
+                    </Zoom>
+                    <Slide direction='left'>
                     <div className="p-6 xl:col-span-3">
                         <div className="grid gap-4 md:grid-cols-2">
                             <div className="grid content-center gap-4">
@@ -58,6 +61,7 @@ const Testimonial = () => {
                             </div>
                         </div>
                     </div>
+                    </Slide>
                 </div>
             </div>
         </section>

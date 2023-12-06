@@ -57,7 +57,7 @@ const UpdatePet = () => {
                 email: user.email
 
             }
-            console.log(updateItem)
+            // console.log(updateItem)
             const petRes = await axios.patch(`https://pet-adoptation-server.vercel.app/pets/${id}`, updateItem);
             console.log(petRes.data)
             if (petRes.data.modifiedCount > 0) {
