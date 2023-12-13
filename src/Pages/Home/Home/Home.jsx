@@ -9,6 +9,7 @@ import Action from '../Action/Action';
 import Testimonial from '../Testimonial/Testimonial';
 import { Helmet } from 'react-helmet';
 import CallToAction from '../CallToAction/CallToAction';
+import Faq from '../Faq/Faq';
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
         <Team></Team>
         <Testimonial></Testimonial>
         <Contact></Contact>
+        <Faq></Faq>
         <CallToAction></CallToAction>
 
     </div>
