@@ -8,6 +8,7 @@ import Category from '../Category/Category';
 import Action from '../Action/Action';
 import Testimonial from '../Testimonial/Testimonial';
 import { Helmet } from 'react-helmet';
+import CallToAction from '../CallToAction/CallToAction';
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
         <Team></Team>
         <Testimonial></Testimonial>
         <Contact></Contact>
+        <CallToAction></CallToAction>
 
     </div>
   )
