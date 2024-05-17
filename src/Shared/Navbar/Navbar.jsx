@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logoImg from '../../assets/logo.jpg'
 // import avatarImg from '../../assets/placeholder.jpg'
 import useAuth from '../../Hooks/useAuth';
-import useAdmin from '../../Hooks/useAdmin';
+// import useAdmin from '../../Hooks/useAdmin';
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
