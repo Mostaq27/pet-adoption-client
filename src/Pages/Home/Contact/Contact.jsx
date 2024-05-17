@@ -8,7 +8,7 @@ const Contact = () => {
 
 
 
-    <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:text-gray-100">
+    <div className="bg-slate-100 grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:text-gray-100">
       <div className="flex flex-col justify-between">
         <Zoom>
           <div className="space-y-2">
@@ -21,18 +21,18 @@ const Contact = () => {
         </Slide>
       </div>
      <Slide direction={"up"}>
-     <form novalidate="" className="space-y-6">
+     <form novalidate="" className="space-y-6 ">
         <div>
           <label for="name" className="text-sm">Full name</label>
-          <input id="name" type="text" placeholder="" className="w-full p-3 rounded dark:bg-gray-800" />
+          <input id="name" type="text" placeholder="" className="w-full p-3 rounded border border-red-400" />
         </div>
         <div>
           <label for="email" className="text-sm">Email</label>
-          <input id="email" type="email" className="w-full p-3 rounded dark:bg-gray-800" />
+          <input id="email" type="email" className="w-full p-3 rounded border border-red-400" />
         </div>
         <div>
           <label for="message" className="text-sm">Message</label>
-          <textarea id="message" rows="3" className="w-full p-3 rounded dark:bg-gray-800"></textarea>
+          <textarea id="message" rows="3" className="w-full p-3 rounded border border-red-400"></textarea>
         </div>
         <button className="btn btn-outline btn-sm py-2 px-4 mt-4">Send Message<FaAngleRight /></button>
       </form>

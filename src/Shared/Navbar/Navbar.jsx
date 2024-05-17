@@ -14,14 +14,14 @@ const Navbar = () => {
   }
 
   const navOptions = <>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/Pet_Listing">Pet Listing</Link></li>
-    <li><Link to="/donation_campaigns">Donation Camp</Link></li>
+    <li className='font-semibold dark:text-white'><Link to="/">Home</Link></li>
+    <li className='font-semibold dark:text-white'><Link to="/Pet_Listing">Pet Listing</Link></li>
+    <li className='font-semibold dark:text-white'><Link to="/donation_campaigns">Donation Camp</Link></li>
    
 
   </>
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar glass bg-red-200 sticky top-0 z-50 rounded-xl  backdrop-blur-3xl bg-opacity-30">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -34,7 +34,7 @@ const Navbar = () => {
       <Link to='/'>
       <div className="btn btn-ghost text-xl">
           <img src={logoImg} className='h-12 rounded-2xl' alt="" />
-          <a className='invisible md:visible'>PawsNest</a>
+          <a className='invisible md:visible dark:text-white'>PawsNest</a>
         </div>
       </Link>
       </div>
@@ -62,14 +62,14 @@ const Navbar = () => {
             </div>
           </label>
           <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-            <li className='btn btn-sm btn-ghost'><Link to="/dashboard">Dashboard</Link></li>
-            <li onClick={handleLogOut} className="btn btn-sm btn-ghost" >LogOut</li>
+            <li className='btn btn-sm btn-ghost dark:text-white'><Link to="/dashboard">Dashboard</Link></li>
+            <li onClick={handleLogOut} className="btn btn-sm btn-ghost dark:text-white" >LogOut</li>
           </ul>
         </div>
         </>
         :
         <>
-        <button className='btn btn-ghost'><Link to="/login">Log In</Link></button>
+        <button className='btn btn-ghost dark:text-white font-semibold'><Link to="/login">Log In</Link></button>
           </>
         }
       </div>

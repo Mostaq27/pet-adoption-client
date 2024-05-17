@@ -6,7 +6,7 @@ import { Zoom } from 'react-awesome-reveal';
 const Testimonial = () => {
     return (
         <Zoom>
-            <section className="dark:bg-slate-500 dark:text-gray-100">
+            <section className="">
                 <div className="container px-6 py-12 mx-auto">
                     <div className="grid items-center gap-4 xl:grid-cols-5">
                         <div className="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">

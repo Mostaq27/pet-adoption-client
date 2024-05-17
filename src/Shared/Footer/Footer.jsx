@@ -5,7 +5,7 @@ import logo from "../../assets/logo.jpg"
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content">
+            <footer className="footer p-10 bg-neutral text-neutral-content">
                 <nav>
                     <header className="footer-title">Services</header>
                     <a className="link link-hover">Branding</a>
@@ -27,7 +27,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
             </footer>
-            <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+            <footer className="footer px-10 py-4 border-t bg-neutral text-neutral-content border-base-300">
                 <aside className="items-center grid-flow-col">
                  <Link to={'/'}><img src={logo} className="h-12" alt="" /></Link>
                     <p>PawsNest Ltd. <br />Providing reliable tech since 1992</p>

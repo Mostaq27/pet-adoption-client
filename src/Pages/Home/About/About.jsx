@@ -7,7 +7,7 @@ const About = () => {
         <>
             <Zoom>
             <div className='mx-10'>
-                <section className="bg-white py-8">
+                <section className=" py-8">
                     <div className="container mx-auto px-2 pt-4 pb-12">
                         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-red-600">About Us</h1>
                         <div className="w-full mb-4">
