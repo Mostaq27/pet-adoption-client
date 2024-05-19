@@ -17,10 +17,10 @@ const CategoryPetsCard = ({ pet }) => {
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">Name: {name}</div>
                     <div className='flex justify-between '>
-                        <p className="text-gray-400 text-base">
+                        <p className="text-gray-500 text-base">
                             Age: {age} Years
                         </p>
-                        <p className="text-gray-400 text-base flex items-center gap-2">
+                        <p className="text-gray-500 text-base flex items-center gap-2">
                             <span className='text-blue-700'><FaLocationDot /></span> <span>{location}</span>
                         </p>
                     </div>
@@ -28,7 +28,7 @@ const CategoryPetsCard = ({ pet }) => {
                 <div className=" pb-2 text-center">
                     <Link to={`/pet_details/${_id}`}>
                         <button
-                            className="btn btn-outline btn-sm text-white bg-blue-400 border-0 border-b-4 border-red-400 mt-4"
+                            className="btn btn-outline btn-sm text-white bg-blue-400 border-0 border-b-4 border-blue-800 mt-4"
                         >Details <FaAngleRight /> </button>
                     </Link>
                 </div>
