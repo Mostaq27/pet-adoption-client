@@ -30,7 +30,7 @@ const PetListingCard = ({ pet }) => {
                 <div className=" pb-2 text-center">
                     <Link to={`/pet_details/${_id}`}>
                         <button
-                            className="btn btn-outline btn-sm bg-blue-400 text-white border-0 border-b-4 border-red-500 mt-4"
+                            className="btn btn-outline btn-sm bg-[#00aaff] text-white border-0 border-b-4 border-blue-800 mt-4"
                         >Details <FaAngleRight /> </button>
                     </Link>
                 </div>

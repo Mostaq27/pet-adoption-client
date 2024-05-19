@@ -24,7 +24,7 @@ const Category = () => {
   }, [])
   return (
     <div>
-      <h2 className="text-5xl font-bold text-red-300 text-center py-10">Our Adorable Pet Category</h2>
+      <h2 className="text-5xl font-bold text-[#00aaff] text-center py-10">Our Adorable Pet Category</h2>
       <p className="text-center">
         "Explore the world of companionship in our diverse pet categories. From the playful antics of dogs to the graceful elegance of cats,<br/> each category holds a unique friend waiting to brighten your life. Adopt joy, adopt love, and make a forever friend today. Your perfect companion is just a category away!"</p>
       {

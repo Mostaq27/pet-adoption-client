@@ -11,7 +11,7 @@ const Action = () => {
             <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
                 <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
                     <div className="sm:max-w-lg">
-                        <h1 className="text-4xl font-bold tracking-tight text-red-900 sm:text-6xl">Give a Home, Give a Heart</h1>
+                        <h1 className="text-4xl font-bold tracking-tight text-[#00aaff] sm:text-6xl">Give a Home, Give a Heart</h1>
                         <p className="mt-4 text-xl text-gray-500">Embrace the joy of pet adoption. Open your heart and home to a furry companion, and experience the unconditional love they bring.</p>
                     </div>
                     <div>

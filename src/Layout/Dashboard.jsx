@@ -25,7 +25,7 @@ const Dashboard = () => {
             </Helmet>
             <div className="flex">
                 {/* dashboard side bar */}
-                <div className="w-64 min-h-screen bg-[#f0717b28]">
+                <div className="w-64 min-h-screen bg-[#00aaff]">
                     <div className="flex mx-10 gap-0 mt-6">
                         <img src={logoImg} className="h-8 w-8" alt="" />
                         <h2 className="uppercase text-2xl font-semibold text-white mx-8 w-[180px] h-[31px]">PawsNest</h2>

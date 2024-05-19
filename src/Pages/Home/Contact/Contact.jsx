@@ -12,8 +12,8 @@ const Contact = () => {
       <div className="flex flex-col justify-between">
         <Zoom>
           <div className="space-y-2">
-            <h2 className="text-4xl font-bold leadi lg:text-5xl">Let's talk!</h2>
-            <div className="dark:text-gray-400">Vivamus in nisl metus? Phasellus.</div>
+            <h2 className="text-4xl font-bold leadi lg:text-5xl dark:text-[#00aaff]">Let's talk!</h2>
+            <div className="dark:text-black">Vivamus in nisl metus? Phasellus.</div>
           </div>
         </Zoom>
         <Slide direction="left">
@@ -23,18 +23,18 @@ const Contact = () => {
      <Slide direction={"up"}>
      <form novalidate="" className="space-y-6 ">
         <div>
-          <label for="name" className="text-sm">Full name</label>
+          <label for="name" className="text-sm dark:text-black">Full name</label>
           <input id="name" type="text" placeholder="" className="w-full p-3 rounded border border-blue-400" />
         </div>
         <div>
-          <label for="email" className="text-sm">Email</label>
+          <label for="email" className="text-sm dark:text-black">Email</label>
           <input id="email" type="email" className="w-full p-3 rounded border border-blue-400" />
         </div>
         <div>
-          <label for="message" className="text-sm">Message</label>
+          <label for="message" className="text-sm dark:text-black">Message</label>
           <textarea id="message" rows="3" className="w-full p-3 rounded border border-blue-400"></textarea>
         </div>
-        <button className="btn btn-outline btn-sm py-2 px-4 mt-4">Send Message<FaAngleRight /></button>
+        <button className="btn btn-outline btn-sm py-2 px-4 mt-4 text-black">Send Message<FaAngleRight /></button>
       </form>
      </Slide>
     </div>

@@ -16,7 +16,7 @@ const Team = () => {
                 <div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
                     <div>
                         <Zoom>
-                            <h1 className="text-4xl font-bold leadi text-center sm:text-5xl">Meet the Heroes Behind the Scenes</h1>
+                            <h1 className="text-4xl font-bold leadi text-[#00aaff] text-center sm:text-5xl">Meet the Heroes Behind the Scenes</h1>
                             <p className="p-2 text-sm font-medium tracki text-center ">And with great bows, the pilot himself. It needs to be in the free throat. Arcu does not want to worry about any easy consequences.<br /> Risus mauris risus molestie mus tellus no tortor. It has always been said that revenge.</p>
                            <div className="text-center">
                            <button className="btn btn-outline btn-sm py-2 px-4 mt-4">

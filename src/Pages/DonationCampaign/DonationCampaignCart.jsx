@@ -6,7 +6,7 @@ const DonationCampaignCart = ({pet}) => {
     const {photo, name, maximumAmount, donatedAmount, _id} = pet;
     return (
         <Zoom>
-            <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[350px] flex-row">
+            <div className="relative flex bg-clip-border border border-[#00aaff] rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[350px] flex-row">
                 <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                    
                     <img
